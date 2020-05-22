@@ -74,7 +74,7 @@ def model_train(epoch,n):
     return a
     
 accuracy_train_model=model_train(1,1)
-os.system("accuracy_train_model > s.txt")
+os.system("$accuracy_train_model > s.txt")
 
 
 # In[ ]:
