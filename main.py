@@ -69,12 +69,14 @@ def model_train(epoch,n):
               verbose=1,
               validation_data=(x_test, y_test))
     score = model.evaluate(x_test, y_test, verbose=0)
-    a={"accuracy":score[1]}
-    model.save("MNIST.h5")
+    a=score[1]
+    model.save("/mlops/MNIST.h5")
     return a
     
 accuracy_train_model=model_train(1,1)
-os.system("$accuracy_train_model > s.txt")
+file.open("accuracy.txt","a")
+file1.write(accuracy_train_model)
+file1.writelines() 
 
 
 # In[ ]:
