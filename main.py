@@ -73,8 +73,10 @@ def model_train(epoch,n):
     model.save("MNIST.h5")
     os.system("mv /MNIST.h5 /mycode")
     return a
-    
-accuracy_train_model=model_train(1,1)
+
+no_epoch=1
+no_layer=1
+accuracy_train_model=model_train(no_epoch,no_layer)
 f = open("accuracy.txt","w+")
 f.write(str(accuracy_train_model))
 f.close()
